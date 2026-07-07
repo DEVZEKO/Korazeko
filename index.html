@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تونز فون | بث مصر والأرجنتين لايف</title>
+  <meta name="description" content="تونز فون - بث مباشر مصر والأرجنتين مع نتيجة لايف وتحديثات المباراة." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg"></div>
+  <header class="hero">
+    <nav>
+      <div class="brand">تونز <span>فون</span></div>
+      <a class="call" href="tel:01030093285">01030093285</a>
+    </nav>
+
+    <section class="hero-content">
+      <p class="tag">Tones Phone × ZEKO LIVE</p>
+      <h1>بث مباشر مباراة <span>مصر</span> والأرجنتين</h1>
+      <p class="subtitle">لايف سريع + نتيجة لحظية من API بدون مفتاح + أحداث المباراة وتحديث تلقائي.</p>
+      <div class="chips">
+        <span>🇪🇬 مصر</span>
+        <strong>VS</strong>
+        <span>🇦🇷 الأرجنتين</span>
+      </div>
+    </section>
+  </header>
+
+  <main class="container">
+    <section class="grid">
+      <article class="card player-card">
+        <div class="section-title">
+          <h2>البث المباشر</h2>
+          <span class="live-dot">LIVE</span>
+        </div>
+        <div class="player">
+          <iframe allowfullscreen="true" frameborder="0" height="500px" scrolling="1" src="https://az.veloqia.online/albaplayer/zyncro/?serv=0" width="100%"></iframe>
+        </div>
+      </article>
+
+      <aside class="card score-card">
+        <div class="section-title">
+          <h2>النتيجة لايف</h2>
+          <button id="refreshBtn">تحديث</button>
+        </div>
+        <div class="scoreboard">
+          <div>
+            <img src="https://flagcdn.com/w80/eg.png" alt="علم مصر">
+            <h3 id="homeName">مصر</h3>
+            <strong id="homeScore">-</strong>
+          </div>
+          <span class="vs">VS</span>
+          <div>
+            <img src="https://flagcdn.com/w80/ar.png" alt="علم الأرجنتين">
+            <h3 id="awayName">الأرجنتين</h3>
+            <strong id="awayScore">-</strong>
+          </div>
+        </div>
+        <p id="matchStatus" class="status">جاري تحميل بيانات المباراة...</p>
+        <p id="matchTime" class="mini-status">--</p>
+      </aside>
+    </section>
+
+    <section class="card events-card">
+      <div class="section-title">
+        <h2>تفاصيل وأحداث المباراة</h2>
+        <span id="lastUpdate">--</span>
+      </div>
+      <ul id="eventsList" class="events">
+        <li>جاري تحميل البيانات من API...</li>
+      </ul>
+    </section>
+
+    <section class="card info-card">
+      <h2>API النتائج</h2>
+      <p>الموقع مربوط حاليًا على ESPN Scoreboard API بدون مفتاح. لو مباراة مصر والأرجنتين موجودة في جدول المباريات، النتيجة هتظهر تلقائيًا. لو مش موجودة، الموقع هيعرض حالة احتياطية بدل ما الصفحة تبقى فاضية.</p>
+      <code>https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard</code>
+    </section>
+  </main>
+
+  <footer>
+    <p>Powered by <b>تونز فون</b> — ZEKO — 01030093285</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
